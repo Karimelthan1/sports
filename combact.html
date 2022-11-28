@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            perspective: 600px;
+        }
+        header{
+            background-image: linear-gradient(rgba(205, 133, 136,.4),rgba(205, 133, 136,.4)),url("images/judo.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 180px;
+        }
+        h1{
+            text-align: center;
+            text-transform: capitalize;
+            color: #fff;
+            font-size: 70px;
+            height: 100%;
+            padding: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+        .flex{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-around ;
+        }
+        .parent1,.parent2,.parent3,.parent4,.parent5{
+            position: relative;
+            margin: 10px;
+            width: 300px;
+            height: 400px;
+            transform-style: preserve-3d;
+        }
+        .parent1 div,.parent2 div,.parent3 div,.parent4 div,.parent5 div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            border-radius:30px 30px;
+            /* height: 250px; */
+            
+            
+            
+        }
+        .parent1 div:first-of-type,.parent2 div:first-of-type,.parent3 div:first-of-type,.parent4 div:first-of-type,.parent5 div:first-of-type{   
+            z-index: 2;
+            background-color:  rgb(193, 225, 237);
+            backface-visibility: hidden;
+            /* border-radius: 0 0 30px 30px;
+            overflow: hidden; */
+        }
+        .parent1 div:last-of-type,.parent2 div:last-of-type,.parent3 div:last-of-type,.parent4 div:last-of-type,.parent5 div:last-of-type{
+            z-index: 1;
+            background-color: rgb(91, 187, 239);
+            padding: 15px;
+            border-radius: 30px;
+            backface-visibility: hidden;
+            transform: rotatey(180deg);
+        }
+        .parent1:hover,.parent2:hover,.parent3:hover,.parent4:hover,.parent5:hover{
+            transition: all 3s ease-in-out;
+            transform: rotateY(180deg)
+        }
+        p{
+            text-transform: capitalize;
+            font-style: italic;
+            font-size: 20px;
+            padding-left: 5px;
+            color: #fff;
+        }
+        h2{
+            border-radius:0 0 30px 30px ;
+
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 0;
+            text-transform: capitalize;
+        }
+        img{
+            display: inline-block;
+            width: 100%;
+            height: 240px;
+        }
+        a{
+            text-transform: capitalize;
+            color: #fff;
+            font-size: 30px;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        span{
+            display: block;
+            text-align: center;
+            text-transform: capitalize;
+            font-style: italic;
+            font-size: 20px;
+            color: #333;
+        }
+        
+        .left{
+            position: absolute;
+            left: 20%;
+            float: left;
+        }
+        .right{
+            position: absolute;
+            right: 20%;
+            float: right;
+        }
+        .icon{
+            margin-bottom: 10px;
+           padding: 20px;
+            height: 100px;
+        }
+        .icon a{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>combact sports</h1>
+    </header>
+    <div class="flex">
+        <div class="parent1">
+            <div>
+                <span>hover here</span>
+                <img src="images/judo.jpg" alt="">
+                <h2>judo</h2>
+                
+            </div><!-- 1 -->
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus ea totam sit blanditiis? Hic quae debitis ipsam facere itaque recusandae!</p>
+                <a href="https://www.britannica.com/sports/judo" class="btn btn-outline-danger btn-block">read more</a>
+            </div><!-- 2 -->
+        </div><!-- parent 1 -->
+        <div class="parent2">
+            <div>
+                <span>hover here</span>
+                <img src="images/karate.jpg" alt="">
+                <h2>karate</h2>
+            </div><!-- 1 -->
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus libero adipisci! Voluptatum temporibus odit harum libero delectus perferendis nam?</p>
+                <a href="https://www.britannica.com/sports/karate" class="btn btn-outline-danger btn-block">read more</a>
+            </div><!-- 2 -->
+        </div><!-- parent 2 -->
+        <div class="parent3">
+            <div>
+                <span>hover here</span>
+                <img src="images/kung fu.jpg" alt="">
+                <h2>kung fu</h2>
+            </div><!-- 1 -->
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt, libero tempora sunt asperiores reprehenderit neque explicabo? Et, consequatur laboriosam?</p>
+                <a href="https://www.britannica.com/sports/kung-fu" class="btn btn-outline-danger btn-block">read more</a>
+            </div><!-- 2 -->
+        </div><!-- parent 3 -->
+        <div class="parent4">
+            <div>
+                <span>hover here</span>
+                <img src="images/taekwondo.jpg" alt="">
+                <h2>taekwondo</h2>
+            </div><!-- 1 -->
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt, libero tempora sunt asperiores reprehenderit neque explicabo? Et, consequatur laboriosam?</p>
+                <a href="https://en.m.wikipedia.org/wiki/taekwondo" class="btn btn-outline-danger btn-block">read more</a>
+            </div><!-- 2 -->
+        </div><!-- parent 4 -->
+        <div class="parent5">
+            <div>
+                <span>hover here</span>
+                <img src="images/wresting.jpg" alt="">
+                <h2>wrestling</h2>
+            </div><!-- 1 -->
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt, libero tempora sunt asperiores reprehenderit neque explicabo? Et, consequatur laboriosam?</p>
+                <a href="https://www.britannica.com/sports/wrestling" class="btn btn-outline-danger btn-block">read more</a>
+            </div><!-- 2 -->
+        </div><!-- parent 5 -->
+    </div><!-- flex -->
+    <div class="icon">
+        <a href="index.html" class="btn btn-dark left ">home</a>
+        <a href="individual.html" class="right btn btn-dark ">previous</a>
+    </div>
+
+
+</body>
+</html>

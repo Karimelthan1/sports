@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        header{
+            background-image: linear-gradient(rgba(109, 167, 242,.4),rgba(109, 167, 242,.4)),url("images/football.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 180px;
+        }
+        h1{
+            text-align: center;
+            text-transform: capitalize;
+            color: #fff;
+            font-size: 70px;
+            height: 100%;
+            padding: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+        .flex{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-around ;
+        }
+        .parent1,.parent2,.parent3,.parent4,.parent5{
+            position: relative;
+            margin: 10px;
+            width: 300px;
+            height: 400px;
+            transform-style: preserve-3d;
+        }
+        .parent1 div,.parent2 div,.parent3 div,.parent4 div,.parent5 div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            border-radius:30px 30px;
+            /* height: 250px; */
+            
+            
+            
+        }
+        .parent1 div:first-of-type,.parent2 div:first-of-type,.parent3 div:first-of-type,.parent4 div:first-of-type,.parent5 div:first-of-type{   
+            z-index: 2;
+            background-color:  rgb(224, 103, 103);
+            backface-visibility: hidden;
+            /* border-radius: 0 0 30px 30px;
+            overflow: hidden; */
+        }
+        .parent1 div:last-of-type,.parent2 div:last-of-type,.parent3 div:last-of-type,.parent4 div:last-of-type,.parent5 div:last-of-type{
+            z-index: 1;
+            background-color: rgb(171, 228, 185);
+            padding: 15px;
+            border-radius: 30px;
+            backface-visibility: hidden;
+            transform: rotatey(180deg);
+        }
+        .parent1:hover,.parent2:hover,.parent3:hover,.parent4:hover,.parent5:hover{
+            transition: all 3s ease-in-out;
+            transform: rotatey(180deg);
+        }
+        p{
+            text-transform: capitalize;
+            font-size: 20px;
+            padding-left: 5px;
+            color: rgb(148, 138, 138);
+        }
+        h2{
+            border-radius:30px 30px 0 0;
+
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(224, 103, 103);
+            margin-bottom: 0;
+            text-transform: capitalize;
+        }
+        img{
+            display: inline-block;
+            width: 100%;
+            height: 240px;
+        }
+        a{
+            text-transform: capitalize;
+            color: #fff;
+            font-size: 30px;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        span{
+            display: block;
+            text-align: center;
+            text-transform: capitalize;
+            font-style: italic;
+            font-size: 20px;
+            color: #333;
+        }
+        
+        .left{
+            position: absolute;
+            left: 20%;
+            float: left;
+        }
+        .right{
+            position: absolute;
+            right: 20%;
+            float: right;
+        }
+        .icon{
+            margin-bottom: 10px;
+           padding: 20px;
+            height: 100px;
+        }
+        .icon a{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>team sports</h1>
+    </header>
+    <div class="flex">
+
+        <div class="parent1">
+            <div>
+                <h2>football</h2>
+                <img src="images/football.jpg" alt="">
+                <span>hover here</span>
+            </div><!-- 1 -->
+            
+            <div>
+                <p>football, is called association football or soccer, game in which two teams of 11 players, using any part of their bodies expect their hands and arms</p>
+                <a href="https://www.britannica.com/sports/football-soccer" class="btn btn-outline-danger btn-block">read more</a>
+            </div><!-- 2 -->
+            
+        </div><!-- parent 1 -->
+
+        <div class="parent2">
+            <div>
+                <h2>volleyball</h2>
+                <img src="images/volleyball.jpg" alt="">
+                <span>hover here</span>
+
+            </div><!-- 1 -->
+            <div>
+                <p>volleyball,game played by two teams, usually by six playerson a side,in which the player use their hands to bat a ball back and forth over a height net</p>
+                <a href="https://www.britannica.com/sports/volleyball" class="btn btn-outline-danger btn-block">read more</a>
+            </div><!-- 2 -->
+        </div><!-- parent 2 -->
+
+        <div class="parent3">
+            <div>
+                <h2>handball</h2>
+                <img src="images/handball.jpg" alt="">
+                <span>hover here</span>
+
+            </div><!-- 1 -->
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt, libero tempora sunt asperiores reprehenderit neque explicabo? Et, consequatur laboriosam?</p>
+                <a href="https://www.britannica.com/sports/team-handball" class="btn btn-outline-danger btn-block">read more</a>
+            </div><!-- 2 -->
+        </div><!-- parent 3 -->
+
+        <div class="parent4">
+            <div>
+                <h2>hockey</h2>
+                <img src="images/hockey.jpg" alt="">
+                <span>hover here</span>
+
+            </div><!-- 1 -->
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt, libero tempora sunt asperiores reprehenderit neque explicabo? Et, consequatur laboriosam?</p>
+                <a href="https://www.britannica.com/sports/ice-hockey" class="btn btn-outline-danger btn-block">read more</a>
+            </div><!-- 2 -->
+        </div><!-- parent 4 -->
+        <div class="parent5">
+            <div>
+                <h2>basketball</h2>
+                <img src="images/basketball.jpg" alt="">
+                <span>hover here</span>
+
+            </div><!-- 1 -->
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt, libero tempora sunt asperiores reprehenderit neque explicabo? Et, consequatur laboriosam?</p>
+                <a href="https://www.britannica.com/sports/basketball" class="btn btn-outline-danger btn-block">read more</a>
+            </div><!-- 2 -->
+        </div><!-- parent 5 -->
+    </div><!-- flex -->
+
+    <div class="icon">
+        <i class="fa fa-arrow-left fa-3x btn btn-dark left"><a href="individual.html">next</a></i>
+        <i class="fa fa-arrow-right fa-3x right btn btn-dark "><a href="index.html">previous</a></i>
+    </div>
+
+
+</body>
+</html>
